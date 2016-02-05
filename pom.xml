@@ -2,23 +2,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.amazonaws.samples</groupId>
-    <artifactId>aws-java-sample</artifactId>
+    <groupId>com.devarchi33.awssdk</groupId>
+    <artifactId>devarchi33-awssdk</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>aws-java-sample</name>
-    <url>http://aws.amazon.com/sdkforjava</url>
+    <name>devarchi33-aws-java-sdk</name>
+    <url>https://devarchi33.wordpress.com/</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.2.4.RELEASE</spring.version>
+        <aws.version>1.9.6</aws.version>
     </properties>
 
     <dependencies>
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- AWS -->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
-            <version>1.9.6</version>
+            <version>${aws.version}</version>
         </dependency>
     </dependencies>
 
@@ -41,7 +51,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.amazonaws.samples.S3Sample</mainClass>
+                    <mainClass>com.devarchi33.Excute</mainClass>
                 </configuration>
             </plugin>
         </plugins>
